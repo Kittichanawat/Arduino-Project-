@@ -37,7 +37,11 @@ void loop() {
   if (distance > 0 && distance < 10) {
     digitalWrite(pin_BUZZER, HIGH); // buzzer ดัง
     digitalWrite(pin_LED_RED, HIGH); // ไฟแดงติด
-  } else {
+  } else if (distance > 60 && distance < 100)
+  {
+    digitalWrite(pin_BUZZER, HIGH); // buzzer ดัง
+    digitalWrite(pin_LED_RED, HIGH); // ไฟแดงติด
+  }else {
     digitalWrite(pin_BUZZER, LOW);  // buzzer หยุด
     digitalWrite(pin_LED_RED, LOW); // ไฟแดงดับ
   }
